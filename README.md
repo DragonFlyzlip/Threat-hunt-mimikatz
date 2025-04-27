@@ -71,6 +71,19 @@ The attacker seemed determined to get those LSASS credentials but was successful
 
 ---
 
+# 📅 Timeline of Simulated Attacks & Defender Response
+
+| Time          | Tool / Command                      | Action                                                                                   |
+|---------------|--------------------------------------|------------------------------------------------------------------------------------------|
+| 11:40 PM      | createdump.exe via PowerShell        | Dumped LSASS memory to Temp\. Unusual use of a legitimate tool triggered initial concern. |
+| 11:40:13 PM   | xordump.exe                          | Another dump tool targeting LSASS. Confirmed suspicious intent.                          |
+| 11:45 PM      | Defender Detection                   | Flagged as HackTool:PowerShell/Lsassdump.A. Blocked successfully.                         |
+| 12:07 AM      | rdrleakdiag.exe                       | Yet another LSASS dump attempt using a new method.                                        |
+| 12:11 AM      | mimikatz.exe                         | Classic credential dumping tool detected as HackTool:PowerShell/Mimikatz!ams. Blocked.    |
+| 12:15 AM      | Repeat of Lsassdump technique        | Persistence observed. Blocked again by Defender.                                          |
+| 12:25 AM      | Final attempt with createdump.exe    | Final round. Reused earlier method. Blocked again.                                        |
+
+
 ## KQL Queries Used:
 
 ```kql
