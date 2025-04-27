@@ -11,7 +11,7 @@ This threat hunt is based on a simulated credential access attack using the Atom
 
 Last week, a routine audit of system activity revealed unusual command-line behavior on a critical finance server. A privileged admin account was observed spawning PowerShell instances with obfuscated arguments and accessing memory-intensive system processes. While no malware was detected, the activity closely resembled known behaviors associated with credential dumping tools such as Mimikatz—especially targeting `lsass.exe`.
 
-To simulate this safely and generate the necessary telemetry, the SOC team used Atomic Red Team’s T1003.001 test using Mimikatz, targeting a non-production Windows 10 VM.
+To simulate this safely and generate the necessary telemetry, the SOC team used Atomic Red Team’s T1003.001 test using Mimikatz, targeting a non-production Windows 10 VM - Check out [Scenario Creation](https://github.com/DragonFlyzlip/Threat-hunt-mimikatz/blob/main/creation%20of%20mimikatz%20scenario.md)
 
 ---
 
