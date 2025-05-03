@@ -1,3 +1,6 @@
+![image](https://github.com/user-attachments/assets/f7e2cf29-06c2-4152-8d34-096e8ba370ce)
+
+
 # Threat Event (Simulated Credential Dump via Mimikatz)
 
 ## Atomic Test T1003.001 (Dump LSASS Memory using mimikatz.exe)
